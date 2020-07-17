@@ -27,18 +27,27 @@ body, input, textarea, select, button, table {
 }
 
 .main,
-.list,
-.sh-body {
+.list {
   width: 100wh;
   height: 100vh;
 }
 
 .sh-body {
-  background-color: #a2dbf7;
+  border-top: 1px solid #a2dbf7;
+  background: #a2dbf7;
+  padding-bottom: 200px;
+}
+
+.button-wrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: #a2dbf7;
 }
 
 .o-button {
-  position: fixed;
+  position: absolute;
   display: block;
   bottom: 50px;
   width: 50px;
@@ -127,6 +136,9 @@ body, input, textarea, select, button, table {
 }
 
 .date {
+  position: fixed;
+  width: 100%;
+  top: 0;
   padding: 25px 0 25px 30px;
   color: #fff;
   background: #2c244c;
@@ -151,7 +163,7 @@ body, input, textarea, select, button, table {
 .todo {
   width: 100%;
   padding: 0 30px;
-  margin-top: 20px;
+  margin-top: 95px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -180,16 +192,26 @@ body, input, textarea, select, button, table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .todo__cont:nth-of-type(n+2) {
   margin-top: 10px;
   padding-top: 10px;
-  border-top: 1px dotted #f8f8f8;
+  border-top: 1px dotted #d1d1d1;
 }
 
 .todo__cont-text {
+  width: 65%;
   margin-left: auto;
+  text-align: right;
+  padding-left: 20px;
+}
+
+.todo__img img {
+  width: 100%;
 }
 
 .sr-only {
@@ -215,11 +237,17 @@ body, input, textarea, select, button, table {
 .o-text--star {
   color: #666;
   font-size: 10px;
+  font-family: sans-serif;
 }
 
 .o-text--star::before {
   content: '* ';
   color: #666;
+}
+
+.link.blue {
+  border-bottom: 1px solid #0973f6;
+  color: #0973f6;
 }
 
 .bg-pink {
@@ -232,5 +260,9 @@ body, input, textarea, select, button, table {
 
 .bg-green {
   background-color: #1a8e85;
+}
+
+.pink {
+  color: #ff6a76;
 }
 /*# sourceMappingURL=common.css.map */

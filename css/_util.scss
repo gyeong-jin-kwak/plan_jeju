@@ -23,6 +23,7 @@
 .o-text--star {
   color: #666;
   font-size: 10px;
+  font-family: sans-serif;
 
   &::before {
     content: '* ';
@@ -30,7 +31,15 @@
   }
 }
 
+// link
+.link.blue {
+  border-bottom: 1px solid #0973f6;
+  color: #0973f6;
+}
+
 // color
 .bg-pink { background-color: #ff6a76;}
 .bg-blue { background-color: #4d87af;}
 .bg-green { background-color: #1a8e85;}
+.pink {color: #ff6a76;}
+
