@@ -1,4 +1,9 @@
+
 // ☆☆☆ common ☆☆☆
+body {
+  background: #a2dbf7;
+}
+
 .main, 
 .list {
   width: 100wh;
@@ -43,13 +48,18 @@
     right: 95px;
     background: url('../img/ico_rain.png') no-repeat 50% 50%/60% auto;
   }
+
+  &--calc {
+    left: 30px;
+    background: url('../img/ico_calc.png') no-repeat 50% 50%/60% auto;
+  }
 }
 
 // ☆☆☆ main ☆☆☆
 .main {
   $root: '.main';
   border-top: 1px solid #a2dbf7;
-  background: url('/img/jeju1.PNG') no-repeat 0 320px/100% auto #a2dbf7;
+  background: url('/img/jeju1.PNG') no-repeat 0 340px/100% auto #a2dbf7;
 
   &__title {
     margin-top: 50px;
@@ -111,8 +121,9 @@
   }
 }
 
-// ☆☆☆ travel days ☆☆☆
 
+// ☆☆☆ travel days ☆☆☆
+.calc,
 .date {
   position: fixed;
   width: 100%;
@@ -123,6 +134,7 @@
   font-family: 'Jua', sans-serif;
 }
 
+.calc,
 .weather {
   &__text {
     margin-left: 15px;
@@ -185,9 +197,23 @@
   }
 
   &__img {
+    margin: 0 auto;
+
     img {
       width: 100%;
     }
+  }
+
+  &__calc {
+    width: 100px;
+
+    &:nth-of-type(n+2) {
+      margin-left: 5px;
+    }
+  }
+
+  &__calc-button {
+    margin-left: auto;
   }
 }
 

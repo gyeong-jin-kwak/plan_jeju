@@ -26,6 +26,10 @@ body, input, textarea, select, button, table {
   color: #555;
 }
 
+body {
+  background: #a2dbf7;
+}
+
 .main,
 .list {
   width: 100wh;
@@ -71,9 +75,14 @@ body, input, textarea, select, button, table {
   background: url("../img/ico_rain.png") no-repeat 50% 50%/60% auto;
 }
 
+.o-button--calc {
+  left: 30px;
+  background: url("../img/ico_calc.png") no-repeat 50% 50%/60% auto;
+}
+
 .main {
   border-top: 1px solid #a2dbf7;
-  background: url("/img/jeju1.PNG") no-repeat 0 320px/100% auto #a2dbf7;
+  background: url("/img/jeju1.PNG") no-repeat 0 340px/100% auto #a2dbf7;
 }
 
 .main__title {
@@ -135,6 +144,7 @@ body, input, textarea, select, button, table {
   margin-top: 15px;
 }
 
+.calc,
 .date {
   position: fixed;
   width: 100%;
@@ -145,10 +155,12 @@ body, input, textarea, select, button, table {
   font-family: 'Jua', sans-serif;
 }
 
+.calc__text,
 .weather__text {
   margin-left: 15px;
 }
 
+.calc__img,
 .weather__img {
   display: inline-block;
   width: 25px;
@@ -156,6 +168,7 @@ body, input, textarea, select, button, table {
   margin-left: 5px;
 }
 
+.calc__img img,
 .weather__img img {
   width: 100%;
 }
@@ -210,8 +223,24 @@ body, input, textarea, select, button, table {
   padding-left: 20px;
 }
 
+.todo__img {
+  margin: 0 auto;
+}
+
 .todo__img img {
   width: 100%;
+}
+
+.todo__calc {
+  width: 100px;
+}
+
+.todo__calc:nth-of-type(n+2) {
+  margin-left: 5px;
+}
+
+.todo__calc-button {
+  margin-left: auto;
 }
 
 .tab {
