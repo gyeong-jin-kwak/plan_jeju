@@ -1,0 +1,170 @@
+// ☆☆☆ common ☆☆☆
+.main, 
+.list,
+.sh-body {
+  width: 100wh;
+  height: 100vh;
+}
+
+.sh-body {
+  background-color: #a2dbf7;
+}
+
+// buttons ( home, list )
+.o-button {
+  position: fixed;
+  display: block;
+  bottom: 50px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+
+  &--home {
+    right: 30px;
+    background: url('../img/ico_home.png') no-repeat 50% 50%/60% auto;
+  }
+
+  &--list {
+    right: 160px;
+    background: url('../img/ico_list.png') no-repeat 50% 50%/60% auto;
+  }
+
+  &--rain {
+    right: 95px;
+    background: url('../img/ico_rain.png') no-repeat 50% 50%/60% auto;
+  }
+}
+
+// ☆☆☆ main ☆☆☆
+.main {
+  $root: '.main';
+  border-top: 1px solid #a2dbf7;
+  background: url('/img/jeju1.PNG') no-repeat 0 320px/100% auto #a2dbf7;
+
+  &__title {
+    margin-top: 50px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__start {
+    margin-top: 30px;
+    text-align: center;
+
+    #{$root}__button {
+      padding: 10px 60px;
+      border-radius: 5px;
+      color: #fff;
+      background: #fea845;
+      font-size: 18px;
+      letter-spacing: 1px;
+      box-shadow: 2px 6px 10px 2px rgba(0, 0, 0, 0.192);
+
+      &:target {
+        color: #f72135;
+      }
+    }
+  }
+}
+
+// ☆☆☆ list ☆☆☆
+.list {
+  border-top: 1px solid #a2dbf7;
+  background: url("../img/tree.png") no-repeat -250px -130px/ auto 120% #a2dbf7;
+  // background-color: #a2dbf7;
+
+  &-button {
+    margin-top: 50%;
+    text-align: center;
+
+    &__item {
+      padding: 20px 30px;
+      margin: 0 20px;
+      border-radius: 10px;
+      font-size: 17px;
+      color: #fff;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        font-family: 'Jua', sans-serif;
+      }
+
+      &:nth-of-type(n+2) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+// ☆☆☆ travel days ☆☆☆
+
+.date {
+  padding: 25px 0 25px 30px;
+  color: #fff;
+  background: #2c244c;
+  font-family: 'Jua', sans-serif;
+}
+
+.weather {
+  &__text {
+    margin-left: 15px;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+  
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.todo {
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 20px;
+  box-sizing: border-box;
+
+  &__item {
+    padding: 15px;
+    border-radius: 15px;
+    background: #fff;
+
+    &:nth-of-type(n+2) {
+      margin-top: 15px;
+    }
+  }
+
+  &__title {
+    display: block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #1a8e85;
+    font-size: 15px;
+    font-family: 'Jua', sans-serif;
+    font-weight: lighter;
+  }
+
+  &__cont {
+    display: flex;
+
+    &:nth-of-type(n+2) {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dotted #f8f8f8;
+    }
+  }
+
+  &__cont-text {
+    margin-left: auto;
+  }
+}
