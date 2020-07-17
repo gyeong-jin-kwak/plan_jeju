@@ -190,3 +190,28 @@
     }
   }
 }
+
+// tab
+.tab {
+  margin-top: 115px;
+  text-align: center;
+
+  & + .todo {
+    margin-top: 20px;
+  }
+
+  &__item {
+    color: #2c244c;
+    font-size: 17px;
+    font-family: 'Jua', sans-serif;
+
+    &:not(:last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 10px;
+      margin: 0 20px 0 40px;
+      background: #2c244c;
+    }
+  }
+}
