@@ -166,6 +166,16 @@ body {
     &:nth-of-type(n+2) {
       margin-top: 15px;
     }
+
+    &.calc-output {
+      .todo__cont-text {
+        width: 40%;
+      }
+
+      .delete-btn {
+        margin-left: 5px;
+      }
+    }
   }
 
   &__title {
