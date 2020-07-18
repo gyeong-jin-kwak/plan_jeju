@@ -270,7 +270,7 @@ body {
 }
 
 .todo__calc:nth-of-type(n+2) {
-  margin-left: 5px;
+  margin: 0 5px;
 }
 
 .todo__calc-button {
