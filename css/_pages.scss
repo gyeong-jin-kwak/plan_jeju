@@ -153,6 +153,8 @@ body {
 }
 
 .todo {
+  $root: '.todo';
+
   width: 100%;
   padding: 0 30px;
   margin-top: 95px;
@@ -186,6 +188,34 @@ body {
     font-size: 15px;
     font-family: 'Jua', sans-serif;
     font-weight: lighter;
+  }
+
+  // &__body.calc {
+  //   padding-top: 10px;
+  // }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: #ff6a76;
+
+    ul {
+      width: 100%;
+    }
+
+    #{$root}__cont {
+      &:first-child {
+        border-top: 1px solid #1a8e85;
+        padding-top: 10px;
+      }
+
+      &:nth-of-type(n+2) {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: none;
+      }
+    }
   }
 
   &__cont {

@@ -18,11 +18,11 @@
       
     <div class="todo">
       <div class="todo__item">
-        <strong class="todo__title">경비 계산하기</strong>
-        <ul class="todo__body">
+        <strong class="todo__title">지출 입력</strong>
+        <ul class="todo__body" style="padding-top: 10px">
           <li class="todo__cont">
             <input id="text1" class="todo__calc" type="text" placeholder="항목명">
-            <input id="number1" class="todo__calc" type="text" placeholder="금액">
+            <input id="number1" class="todo__calc" type="number" placeholder="금액">
             <input id="save" type="button" class="todo__calc-button" value="저장">
           </li>
           <!-- <li class="todo__cont">
@@ -34,15 +34,29 @@
       </div>
 
       <div class="todo__item calc-output">
-        <strong class="todo__title">계산 결과</strong>
+        <strong class="todo__title">사용한 경비 리스트</strong>
         <ul id="output-list" class="todo__body">
-          <li class="todo__cont" id="test">
+          <!-- <li class="todo__cont" id="test">
             <strong class="todo__cont-tit">항목명</strong>
             <div class="todo__cont-text">5000원</div>
             <input type="button" class="delete-btn" value="삭제" />
-          </li>
+          </li> -->
           <!-- <li class="todo__cont"></li> -->
         </ul>
+
+        <!-- total -->
+        <!-- <div class="todo__foot">
+          <ul>
+            <li class="todo__cont">
+              <strong class="todo__cont-tit">총합계</strong>
+              <div id="total" class="todo__cont-text">원</div>
+            </li>
+            <li class="todo__cont">
+              <strong class="todo__cont-tit">남은경비</strong>
+              <div class="todo__cont-text">원</div>
+            </li>
+          </ul>
+        </div> -->
       </div>
     </div>
   </div>
@@ -55,39 +69,42 @@
   <script type="text/javascript" src="/js/common.js"></script>
 
   <script type="text/javascript">
-    window.onload = function(){
       
     var list = document.getElementById('output-list');
     var save_btn = document.getElementById('save');
     var delete_btn = document.getElementsByClassName('delete-btn');
     var items = document.querySelectorAll('#output-list li');
-
+    
     save_btn.addEventListener('click', function(e){
       var text_value = save_btn.previousSibling.previousSibling.previousSibling.previousSibling.value;
       var number_value = save_btn.previousSibling.previousSibling.value;
       var newItem = document.createElement("li");
       var htmlTemplate = '';
-   
+
       htmlTemplate += '<strong class="todo__cont-tit">';
       htmlTemplate += text_value;
       htmlTemplate += '</strong>';
       htmlTemplate += '<div class="todo__cont-text">';
       htmlTemplate += number_value + '원';
       htmlTemplate += '</div>';
-      htmlTemplate += '<input type="button" class="delete-btn" value="삭제" />';
+      // htmlTemplate += '<input type="button" class="delete-btn" value="삭제" />';
+
+      totalTemplate += total_sum + '원';
+      div.innerHTML = totalTemplate
 
       newItem.setAttribute("id", items.length);
       newItem.setAttribute("class", "todo__cont");
       newItem.innerHTML = htmlTemplate;
       list.appendChild(newItem);
-      // console.log(newItem.id, newItem.innerHTML)
 
-      localStorage.setItem(newItem.id, newItem.innerHTML);
-      // var getValue = localStorage.getItem(newItem.id);
-      // console.log(getValue);
-
-      // localStorage.getItem(newItem.id);
-    });
+      localStorage.setItem('outputItems', list.innerHTML);
+      localStorage.setItem('total', div.innerHTML);
+    }, false);
+      
+    var saved = localStorage.getItem('outputItems');
+      if (saved) {
+        list.innerHTML = saved;
+      }
 
     // 삭제 기능
     // for(i=0; i<delete_btn.length; i++){
@@ -96,11 +113,7 @@
 
     //     list.removeChild(target);
     //   })
-    // }
- 
-
-    // console.log(btn);
-    }
+    // } 
   </script>
 </body>
 </html>

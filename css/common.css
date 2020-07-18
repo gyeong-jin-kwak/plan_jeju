@@ -209,6 +209,32 @@ body {
   font-weight: lighter;
 }
 
+.todo__foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  color: #ff6a76;
+}
+
+.todo__foot ul {
+  width: 100%;
+}
+
+.todo__foot .todo__cont:first-child {
+  border-top: 1px solid #1a8e85;
+  padding-top: 10px;
+}
+
+.todo__foot .todo__cont:nth-of-type(n+2) {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: none;
+}
+
 .todo__cont {
   display: -webkit-box;
   display: -ms-flexbox;
